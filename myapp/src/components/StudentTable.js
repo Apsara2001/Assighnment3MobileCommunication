@@ -24,7 +24,7 @@ const[stu,setStu]=useState(props.students[0]);
                                     <td>{student.lastName}</td> 
                                     <td>{student.course}</td>
                                     <td>{student.address.country}</td>
-                                    <td><button onClick={()=>{setStu(student)} }>View</button></td>
+                                    <td><button id={student.studentId} onClick={()=>{setStu(student)}}>View</button></td>
                                 </tr>
                             )
                         }
@@ -32,7 +32,7 @@ const[stu,setStu]=useState(props.students[0]);
                 </table>
             </div>
             <div className="rightDiv">
-                        <Profile student={stu}/>
+                        <Profile stu={stu}/>
             </div>
         </div>
     );
