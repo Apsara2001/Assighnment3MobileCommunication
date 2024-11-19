@@ -1,9 +1,9 @@
 import '../assests/css/compo.css';
 export default function StudentTable(props){
     return(
-        <div classname="outerDiv">
-            <div classname="leftDiv">
-                <table>
+        <div className="outerDiv">
+            <div className="leftDiv">
+                <table border="1">
                     <thead>
                         <tr>
                             <td>First Name</td>
@@ -16,8 +16,8 @@ export default function StudentTable(props){
                         {
                             props.students.map(student=>
                                 <tr>
-                                    <td>{student.firstname}</td>
-                                    <td>{student.lastname}</td> 
+                                    <td>{student.firstName}</td>
+                                    <td>{student.lastName}</td> 
                                     <td>{student.course}</td>
                                     <td>{student.address.country}</td>
                                 </tr>
